@@ -1,0 +1,10 @@
+dog_price=2.50
+cat_price=4.00
+print("Enter the number of packages of cat food:")
+cat_food=int(input())
+print("Enter the number of packages of dog food:")
+dog_food=int(input())
+total_cat=cat_food*cat_price
+total_dog=dog_food*dog_price
+total_money=total_cat+total_dog
+print(total_money)
