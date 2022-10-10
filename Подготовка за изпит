@@ -1,0 +1,28 @@
+failed_threshold=int(input())
+counter=0
+suxess_counter=0
+curent_problem=0
+avr=0
+while True:
+
+    problem=input(f'Enter problem: ')
+    score=int(input())
+    suxess_counter=suxess_counter+1
+    curent_problem=problem
+    avr=score+avr
+    avr=avr/suxess_counter
+    last_problem=problem
+    if problem=='Enough':
+        print(f'Average score: {avr:.2f}')
+        print(f'Number of problems: {suxess_counter}')
+        print(f'Last problem: {last_problem}')
+        break
+        
+    elif score<=4:
+        counter=1+counter
+        if  counter==failed_threshold:
+            print(f'You need a break, {counter} poor grades.')
+            break
+        
+        
+        
