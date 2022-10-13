@@ -1,14 +1,15 @@
-lenght=int(input())
-width=int(input())
+lenght = int(input())
+width = int(input())
 
-number_pieces=lenght*width
-while number_pieces>=0:
-    cut_pieces=input()
-    if cut_pieces!='Stop':
-        number_pieces=number_pieces-int(cut_pieces)
-    
-if number_pieces==0 or cut_pieces=='Stop':
-    print(f"{number_pieces} pieces are left.")
-    
-else:
-    print(f"No more cake left! You need {number_pieces} pieces more.")
+number_pieces = lenght * width
+while number_pieces >= 0:
+    cut_pieces = input()
+    if cut_pieces != 'STOP':
+        number_pieces = number_pieces - int(cut_pieces)
+
+    elif number_pieces == 0 or cut_pieces == 'STOP':
+        ##number_pieces = number_pieces - int(cut_pieces)
+        print(f"{number_pieces} pieces are left.")
+
+
+print(f"No more cake left! You need {abs(number_pieces)} pieces more.")
